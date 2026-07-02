@@ -5,103 +5,308 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Study Group Membership Drive</title>
+    <title>Study Group — Learn, Build & Grow Together</title>
+    <meta name="description" content="A student-run study group where solo studying becomes shared momentum. Weekly sessions, real projects, and a network that shows up.">
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c2b4a'/%3E%3Cpath d='M32 20c-5-4-13-5-18-3v26c5-2 13-1 18 3 5-4 13-5 18-3V17c-5-2-13-1-18 3z' fill='none' stroke='%23faf6ec' stroke-width='2.5' stroke-linejoin='round'/%3E%3Cpath d='M32 20v26' stroke='%23faf6ec' stroke-width='2.5'/%3E%3Ccircle cx='47' cy='14' r='3.5' fill='%23e8635f'/%3E%3C/svg%3E">
 
 </head>
 
 <body>
 
-    <!-- Navigation -->
+<!-- Paper texture layer -->
+<div class="paper-grid" aria-hidden="true"></div>
 
-    <nav>
+<!-- ============ NAV ============ -->
+<header>
+    <nav class="site-nav">
 
-        <div class="logo">
+        <a href="#top" class="logo">
+            <svg viewBox="0 0 64 64" class="logo-mark" aria-hidden="true">
+                <rect width="64" height="64" rx="14" fill="var(--ink)"/>
+                <path d="M32 20c-5-4-13-5-18-3v26c5-2 13-1 18 3 5-4 13-5 18-3V17c-5-2-13-1-18 3z" fill="none" stroke="var(--paper)" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M32 20v26" stroke="var(--paper)" stroke-width="2.5"/>
+                <circle cx="47" cy="14" r="3.5" fill="var(--coral)"/>
+            </svg>
+            <span>Study Group</span>
+        </a>
 
-            Study Group
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
 
-        </div>
-
-        <ul>
-
-            <li><a href="#">Home</a></li>
-
-            <li><a href="#">About</a></li>
-
-            <li><a href="#">Events</a></li>
-
-            <li><a href="#">Contact</a></li>
-
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#sessions">Sessions</a></li>
+            <li><a href="#voices">Voices</a></li>
+            <li><a href="#faq">FAQ</a></li>
         </ul>
 
+        <a href="#join" class="btn btn-primary btn-nav">Join now</a>
+
     </nav>
+</header>
 
 
-    <!-- Hero -->
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+    <div class="hero-inner container">
 
-    <section class="hero">
+        <div class="hero-copy">
+            <p class="eyebrow">STUDY GROUP · EST. 2026 · OPEN TO ALL YEARS</p>
 
-        <h1>
+            <h1>
+                Where solo studying
+                <span class="highlight">becomes shared momentum</span>
+            </h1>
 
-            Join Our Study Group
-
-        </h1>
-
-        <p>
-
-            Learn • Build • Collaborate • Grow Together
-
-        </p>
-
-    </section>
-
-
-    <!-- Form -->
-
-    <section class="container">
-
-        <div class="card">
-
-            <h2>Membership Registration</h2>
-
-            <p>
-
-                Fill in the details below to become a member.
-
+            <p class="hero-sub">
+                Weekly sessions, real build sprints, and a group of people who actually
+                show up for each other's deadlines. Bring a laptop, bring a question,
+                bring your half-finished project — we'll figure it out together.
             </p>
+
+            <div class="hero-actions">
+                <a href="#join" class="btn btn-primary">Join the group</a>
+                <a href="#sessions" class="btn btn-ghost">See this week's sessions</a>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat">
+                    <span class="stat-num">180+</span>
+                    <span class="stat-label">active members</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">3</span>
+                    <span class="stat-label">sessions / week</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">24</span>
+                    <span class="stat-label">projects shipped</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+            <div class="card-stack">
+                <div class="index-card card-3">
+                    <span class="tag tag-sage">Interview Prep</span>
+                    <p>Mock DSA round — Fri 6 PM</p>
+                </div>
+                <div class="index-card card-2">
+                    <span class="tag tag-coral">Web Dev</span>
+                    <p>React state patterns walkthrough</p>
+                </div>
+                <div class="index-card card-1">
+                    <span class="tag tag-highlight">SQL</span>
+                    <p>Window functions, live query lab</p>
+                    <div class="card-check">✓ 14 attending</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ============ ABOUT / PILLARS ============ -->
+<section class="section" id="about">
+    <div class="container">
+
+        <p class="eyebrow center">WHY WE EXIST</p>
+        <h2 class="section-title center">Three things we're stubborn about</h2>
+
+        <div class="pillars">
+
+            <div class="pillar">
+                <div class="pillar-icon">
+                    <svg viewBox="0 0 40 40" fill="none"><path d="M20 6 6 13l14 7 14-7-14-7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M11 17v9c0 2.5 4 5 9 5s9-2.5 9-5v-9" stroke="currentColor" stroke-width="2"/></svg>
+                </div>
+                <h3>Learn out loud</h3>
+                <p>Every session is built around explaining, not just absorbing. If you can teach it back to the group, you actually know it.</p>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-icon">
+                    <svg viewBox="0 0 40 40" fill="none"><rect x="7" y="7" width="26" height="20" rx="2" stroke="currentColor" stroke-width="2"/><path d="M14 33h12M20 27v6" stroke="currentColor" stroke-width="2"/><path d="M13 18l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h3>Ship real things</h3>
+                <p>No toy exercises for their own sake. Sprints end with a working demo, a pushed repo, or a solved problem set — something you can point to.</p>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-icon">
+                    <svg viewBox="0 0 40 40" fill="none"><circle cx="14" cy="14" r="5" stroke="currentColor" stroke-width="2"/><circle cx="27" cy="18" r="4" stroke="currentColor" stroke-width="2"/><path d="M6 32c0-5 4-9 9-9 4 0 7 2 8.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M20 27c1-2 4-3.5 7-3.5 4 0 7 3 7 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <h3>Show up for each other</h3>
+                <p>Miss a class, get the notes. Stuck at midnight, someone answers. It's a group chat that actually replies — not a silent Discord server.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ SESSIONS / SCHEDULE ============ -->
+<section class="section section-alt" id="sessions">
+    <div class="container">
+
+        <div class="section-head">
+            <div>
+                <p class="eyebrow">THIS WEEK'S LINEUP</p>
+                <h2 class="section-title">Same three slots, every week</h2>
+            </div>
+            <p class="section-desc">Drop into any session — no need to attend all three. Rooms are shared a day ahead in the group chat.</p>
+        </div>
+
+        <div class="schedule-grid">
+
+            <div class="schedule-card">
+                <div class="schedule-day">
+                    <span class="day-name">Mon</span>
+                    <span class="day-time">6:30 PM</span>
+                </div>
+                <h3>DSA &amp; Problem Solving</h3>
+                <p>Pattern-based practice — today's focus rotates weekly, shared Sunday night.</p>
+                <span class="tag tag-sage">In-person · Lab 3</span>
+            </div>
+
+            <div class="schedule-card">
+                <div class="schedule-day">
+                    <span class="day-name">Wed</span>
+                    <span class="day-time">7:00 PM</span>
+                </div>
+                <h3>Build Night</h3>
+                <p>Bring your side project or class assignment. We debug, pair, and ship together.</p>
+                <span class="tag tag-coral">Online · Meet link shared</span>
+            </div>
+
+            <div class="schedule-card">
+                <div class="schedule-day">
+                    <span class="day-name">Fri</span>
+                    <span class="day-time">6:00 PM</span>
+                </div>
+                <h3>Mock Interviews &amp; Talks</h3>
+                <p>Peer mock rounds, and once a month, a short talk from a senior or alum.</p>
+                <span class="tag tag-highlight">In-person · Seminar Hall</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section" id="voices">
+    <div class="container">
+
+        <p class="eyebrow center">FROM THE GROUP CHAT</p>
+        <h2 class="section-title center">What members say</h2>
+
+        <div class="notes-wall">
+
+            <div class="sticky-note note-1">
+                <p>"Joined for the SQL sessions, stayed for the mock interviews. Landed my first internship after two rounds of practice here."</p>
+                <span class="note-author">— 3rd Year, CSE</span>
+            </div>
+
+            <div class="sticky-note note-2">
+                <p>"Build Night is the only reason I finished my Flask project on time. Someone always spots the bug you've been staring at for an hour."</p>
+                <span class="note-author">— 2nd Year, IT</span>
+            </div>
+
+            <div class="sticky-note note-3">
+                <p>"It's low-pressure but people are genuinely sharp. Best part of my week, honestly."</p>
+                <span class="note-author">— Final Year, ECE</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ FAQ ============ -->
+<section class="section section-alt" id="faq">
+    <div class="container container-narrow">
+
+        <p class="eyebrow center">GOOD TO KNOW</p>
+        <h2 class="section-title center">Frequently asked</h2>
+
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Who can join?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Any student, any year, any branch. Most sessions are practical enough that first-years and final-years both get something out of them.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is there a membership fee?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>No. It's completely free — just fill in the registration form below and you're in the group chat by the next session.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do I need prior coding experience?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Not for Build Night or the talks. DSA sessions move faster, but there's always someone happy to pair with a beginner.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What do I need to bring?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>A laptop if you have one, and whatever you're currently stuck on. That's genuinely enough.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============ FORM ============ -->
+<section class="section" id="join">
+    <div class="container">
+
+        <div class="card form-card">
+
+            <p class="eyebrow center">LAST STEP</p>
+            <h2 class="section-title center">Membership registration</h2>
+            <p class="form-sub">Fill in the details below to become a member. You'll get a confirmation on the email you provide.</p>
 
             <form id="membershipForm">
 
                 <div class="row">
 
                     <div class="input-group">
-
-                        <label>Full Name</label>
-
-                        <input
-                            type="text"
-                            id="name"
-                            required
-                        >
-
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
                     </div>
 
                     <div class="input-group">
-
-                        <label>Registration Number</label>
-
-                        <input
-                            type="text"
-                            id="registration"
-                            required
-                        >
-
+                        <label for="registration">Registration Number</label>
+                        <input type="text" id="registration" required>
                     </div>
 
                 </div>
@@ -109,27 +314,13 @@
                 <div class="row">
 
                     <div class="input-group">
-
-                        <label>Email</label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            required
-                        >
-
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
                     </div>
 
                     <div class="input-group">
-
-                        <label>Phone Number</label>
-
-                        <input
-                            type="tel"
-                            id="phone"
-                            required
-                        >
-
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
                     </div>
 
                 </div>
@@ -137,82 +328,80 @@
                 <div class="row">
 
                     <div class="input-group">
-
-                        <label>Department</label>
-
-                        <input
-                            type="text"
-                            id="department"
-                            required
-                        >
-
+                        <label for="department">Department</label>
+                        <input type="text" id="department" required>
                     </div>
 
                     <div class="input-group">
-
-                        <label>Year</label>
-
+                        <label for="year">Year</label>
                         <select id="year">
-
                             <option>1st Year</option>
                             <option>2nd Year</option>
                             <option>3rd Year</option>
                             <option>4th Year</option>
-
                         </select>
-
                     </div>
 
                 </div>
 
                 <div class="input-group">
-
-                    <label>Skills</label>
-
-                    <input
-                        type="text"
-                        id="skills"
-                        placeholder="Python, Java, React..."
-                    >
-
+                    <label for="skills">Skills</label>
+                    <input type="text" id="skills" placeholder="Python, Java, React...">
                 </div>
 
                 <div class="input-group">
-
-                    <label>Why do you want to join?</label>
-
-                    <textarea
-                        id="reason"
-                        rows="5"
-                    ></textarea>
-
+                    <label for="reason">Why do you want to join?</label>
+                    <textarea id="reason" rows="5"></textarea>
                 </div>
 
-                <button
-                    type="submit"
-                    id="submitBtn"
-                >
-
+                <button type="submit" id="submitBtn">
                     Join Study Group
-
                 </button>
 
             </form>
 
         </div>
 
-    </section>
+    </div>
+</section>
 
 
-    <!-- Footer -->
+<!-- ============ FOOTER ============ -->
+<footer>
+    <div class="container footer-inner">
 
-    <footer>
+        <div class="footer-brand">
+            <a href="#top" class="logo logo-footer">
+                <svg viewBox="0 0 64 64" class="logo-mark" aria-hidden="true">
+                    <rect width="64" height="64" rx="14" fill="var(--paper)"/>
+                    <path d="M32 20c-5-4-13-5-18-3v26c5-2 13-1 18 3 5-4 13-5 18-3V17c-5-2-13-1-18 3z" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/>
+                    <path d="M32 20v26" stroke="var(--ink)" stroke-width="2.5"/>
+                    <circle cx="47" cy="14" r="3.5" fill="var(--coral)"/>
+                </svg>
+                <span>Study Group</span>
+            </a>
+            <p>A student-run collective for learning, building, and showing up for each other — one session at a time.</p>
+        </div>
 
-        © 2026 Study Group • Built with Azure Serverless
+        <div class="footer-links">
+            <h4>Explore</h4>
+            <a href="#about">About</a>
+            <a href="#sessions">Sessions</a>
+            <a href="#voices">Voices</a>
+            <a href="#faq">FAQ</a>
+        </div>
 
-    </footer>
+        <div class="footer-links">
+            <h4>Connect</h4>
+            <a href="#join">Become a member</a>
+            <a href="mailto:hello@studygroup.dev">hello@studygroup.dev</a>
+        </div>
 
-    <script src="script.js"></script>
+    </div>
 
+    <p class="footer-bottom">© 2026 Study Group · Built with Azure Serverless</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
