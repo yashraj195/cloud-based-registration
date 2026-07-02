@@ -97,3 +97,69 @@ form.addEventListener("submit", async (e) => {
     submitBtn.innerHTML = "Join Study Group";
 
 });
+
+
+/* ============================================
+   UI ENHANCEMENTS (additive only — does not
+   touch the form submission logic above)
+   ============================================ */
+
+// Mobile nav toggle
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.getElementById("navLinks");
+
+if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        navToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    // Close mobile menu after tapping a link
+    navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+            navToggle.setAttribute("aria-expanded", "false");
+        });
+    });
+}
+
+// FAQ accordion
+document.querySelectorAll(".faq-item").forEach((item) => {
+    const question = item.querySelector(".faq-question");
+    if (!question) return;
+
+    question.addEventListener("click", () => {
+        const isOpen = item.classList.contains("open");
+
+        document.querySelectorAll(".faq-item.open").forEach((openItem) => {
+            openItem.classList.remove("open");
+        });
+
+        if (!isOpen) item.classList.add("open");
+    });
+});
+
+// Scroll reveal for sections
+const revealTargets = document.querySelectorAll(
+    ".pillar, .schedule-card, .sticky-note, .faq-item"
+);
+
+revealTargets.forEach((el) => el.classList.add("reveal"));
+
+if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.15 }
+    );
+
+    revealTargets.forEach((el) => observer.observe(el));
+} else {
+    revealTargets.forEach((el) => el.classList.add("is-visible"));
+}
