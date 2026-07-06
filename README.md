@@ -192,9 +192,9 @@ POST /api/MembershipRegister
 
 ```json
 {
-  "name": "John Doe",
+  "name": "Yash Raj",
   "registration": "2212345678",
-  "email": "john@example.com",
+  "email": "yraj@example.com",
   "phone": "9876543210",
   "department": "CSE",
   "year": "3rd Year",
