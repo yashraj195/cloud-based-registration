@@ -1,4 +1,4 @@
-# ☁️ Cloud-Based Membership Registration System
+# ☁️ Serverless Membership Registration System
 
 ![Azure](https://img.shields.io/badge/Azure-Functions-blue?logo=microsoftazure)
 ![Python](https://img.shields.io/badge/Python-3.10-yellow?logo=python)
@@ -12,7 +12,7 @@
 
 ## 📌 Project Overview
 
-The **Cloud-Based Membership Registration System** is a fully serverless web application developed using Microsoft Azure cloud services.
+The **Serverless Membership Registration System** is a fully serverless web application developed using Microsoft Azure cloud services.
 
 It enables users to submit membership registration details through a responsive web form. The submitted information is processed by an Azure Function and securely stored in Azure Cosmos DB.
 
@@ -257,45 +257,7 @@ Azure Cosmos DB
 
 ---
 
-# ⚙️ Local Setup
 
-## Clone Repository
-
-```bash
-git clone https://github.com/yashraj195/cloud-based-registration.git
-```
-
----
-
-## Install Backend Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## Start Azure Function
-
-```bash
-func start
-```
-
----
-
-## Run Frontend
-
-Open
-
-```
-index.html
-```
-
-or
-
-Use VS Code Live Server.
-
----
 
 # 📚 Azure Services Used
 
@@ -304,23 +266,6 @@ Use VS Code Live Server.
 - Azure Cosmos DB
 - Azure Storage Account
 - Azure Portal
-
----
-
-# 🎯 Learning Outcomes
-
-This project helped me gain practical experience with:
-
-- Serverless Computing
-- REST API Development
-- Cloud Deployment
-- Azure Functions
-- Azure Cosmos DB
-- Environment Variables
-- CORS Configuration
-- GitHub Deployment
-- JavaScript Fetch API
-- Cloud-native Application Development
 
 ---
 
